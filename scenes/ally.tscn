@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://q5sapnk8w67o"]
+
+[ext_resource type="Script" path="res://scenes/ally.gd" id="1_ggvyo"]
+[ext_resource type="Texture2D" uid="uid://yxnql4lwmsn6" path="res://assets/sprites/ally.png" id="2_7ddfb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r72nj"]
+size = Vector2(20.569, 32.3468)
+
+[node name="Ally" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 3
+safe_margin = 0.001
+script = ExtResource("1_ggvyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7ddfb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.97, 0.985)
+shape = SubResource("RectangleShape2D_r72nj")
